@@ -128,10 +128,14 @@ img { display: block; max-width: 100%; }
 .review-card blockquote p + p { margin-top: 1rem; }
 .review-card blockquote .review-lead { font-size: clamp(1.7rem, 2.8vw, 2.45rem); line-height: 1.1; }
 .review-card-dark blockquote p { color: rgba(255,255,255,.9); }
-.review-source { margin-top: auto; display: flex; align-items: center; gap: .5rem; color: #737c75; font-size: .72rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; position: relative; z-index: 1; }
+.review-source { width: fit-content; margin-top: auto; padding-bottom: .2rem; display: flex; align-items: center; gap: .5rem; color: #737c75; border-bottom: 1px solid transparent; font-size: .72rem; font-weight: 700; letter-spacing: .08em; text-decoration: none; text-transform: uppercase; position: relative; z-index: 1; transition: border-color .2s ease, color .2s ease; }
 .review-source span { color: #4285f4; font-size: .92rem; }
+.review-source .review-arrow { color: currentColor; font-size: .8rem; transition: transform .2s ease; }
+.review-source:hover, .review-source:focus-visible { border-color: currentColor; color: var(--forest); }
+.review-source:hover .review-arrow, .review-source:focus-visible .review-arrow { transform: translate(2px, -2px); }
 .review-card-featured .review-source { color: rgba(16,36,25,.64); }
 .review-card-dark .review-source { color: rgba(255,255,255,.54); }
+.review-card-dark .review-source:hover, .review-card-dark .review-source:focus-visible { color: white; }
 
 .contact-band { background: var(--orange); display: grid; grid-template-columns: 1.1fr .9fr; gap: 3rem; align-items: end; padding: clamp(4rem, 7vw, 7rem) clamp(1.25rem, 7vw, 7rem); }
 .contact-band .eyebrow { color: #273c2d; }

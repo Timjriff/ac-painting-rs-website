@@ -263,3 +263,17 @@ footer { min-height: 130px; display: grid; grid-template-columns: 1fr auto auto;
   .process-list li { grid-template-columns: 48px 1fr; }
   .service-area-facts div { grid-template-columns: 1fr; gap: .35rem; }
 }
+
+.credential-strip {
+  background: linear-gradient(to bottom, #ffffff 0 40%, #e1e1e1 40% 100%);
+  padding: 0 clamp(1rem, 5vw, 4rem);
+  overflow: hidden;
+}
+
+.credential-strip img {
+  display: block;
+  width: min(100%, 640px);
+  height: auto;
+  margin: 0 auto;
+}
+
